@@ -1,0 +1,128 @@
+<body>
+
+  <div>
+  <section>
+<mat-toolbar style="color: black;">
+  <mat-toolbar-row style="background: black;">
+    <span style="margin-left: 550px; background-color: black; color: white; font-size: x-large;">Create your Dating-Account</span>
+  </mat-toolbar-row>
+  </mat-toolbar>
+</section>
+
+<section>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Knowing You">     
+        <div class="example-button-row">
+          <button  mat-raised-button>Random</button>
+          <button mat-raised-button color="primary">Dating</button>
+          <button mat-raised-button color="accent">Love</button>
+          <button mat-raised-button color="warn">Online</button>
+          <button mat-raised-button disabled>Forever</button>
+          <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+
+        <form class="example-form">
+          <mat-form-field  style="margin-left: 350px; margin-top: 150px;  width: 800px; " class="example-full-width" appearance="fill">
+            <mat-label> How Many Times your HEART was broken?</mat-label>
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="Number"
+                   matInput
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of options" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+  
+    </mat-tab>
+    <mat-tab label="Checking"> 
+      <div class="example-button-row">
+      <button mat-button color="primary">Dating</button>
+      <button mat-button color="accent">You are You</button>
+      <button mat-button color="warn">Love</button>
+      <button mat-button disabled>Hurt</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Forever</a>
+
+      <mat-card>
+        <mat-card-content style="margin-top: 40px; margin-left: 300px;">
+          <h2 class="example-h2">Check you Heart</h2>
+      
+          <section class="example-section">
+            <mat-checkbox class="example-margin">You have already moved on</mat-checkbox>
+            <mat-checkbox class="example-margin">Your heart is already Happy</mat-checkbox>
+            <mat-checkbox class="example-margin">You want to find your soulmate?</mat-checkbox>
+            
+          </section>
+      
+          <section  class="example-section" >
+            <mat-checkbox class="example-margin">Do you trust this website?</mat-checkbox>
+          </section>
+        </mat-card-content>
+      </mat-card>
+      
+      <mat-card class="result">
+        <mat-card-content style="margin-top: 20px; margin-left: 300px;">
+          <h2 class="example-h2">Important Item</h2>
+      
+          <section class="example-section">
+            <mat-checkbox
+                class="example-margin"
+            >
+              Do you Really love yourself?
+            </mat-checkbox>
+          </section>
+        </mat-card-content>
+      </mat-card>
+      </div></mat-tab>
+  
+    
+    <mat-tab label="We need your TRUST">
+  
+      <mat-card>
+        <mat-card-content>
+          <h2 style="margin-left: 400px; font-size: xx-large; margin-top: 50px;" class="example-h2">How many % do you trust this website?</h2>
+
+          <mat-slider style="width: 900px; margin-left: 250px; margin-top: 80px;
+          " aria-label="unit(s)"></mat-slider>
+      
+          </mat-card-content></mat-card></mat-tab>
+
+    
+    <mat-tab label="final Step">
+      <h2><b style="margin-left: 480px;  margin-bottom: 20px;">For the last step, Submit a form</b></h2>
+      <mat-form-field style="margin-left: 300px; width: 700px; margin-bottom: 20px;"  appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div>
+    <mat-form-field style="margin-left: 300px; width: 700px; margin-bottom: 20px;" appearance="fill">
+      <mat-label>Tell us what kind of man/woman is your type</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field style="margin-left: 300px; width: 700px; margin-bottom: 20px;"  appearance="fill">
+        <mat-label>Enter your Age</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+      <div class="example-container">
+        <mat-form-field style="margin-left: 300px; width: 700px; margin-bottom: 20px;" appearance="fill">
+          <mat-label>Enter your Email</mat-label>
+          <input style="margin-left: 15px; width: 900px;" matInput placeholder="pat@example.com"  required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+
+    
+    
+  </mat-tab-group>
+</section>
+  </div>
+    
+  
+</body>
